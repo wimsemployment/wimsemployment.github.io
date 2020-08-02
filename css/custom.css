@@ -1,5 +1,6 @@
 /* default styles */
 :root {
+    --min-header-height: 30px;
     --content-width: 60%;
     --card-width: 200px;
     --card-margin: 1em;
@@ -13,6 +14,7 @@
 /* styles when width shrinks */
 @media only screen and (max-width: 720px) and (min-width: 420px) {
     :root {
+        --min-header-height: 40px;
         --content-width: 80%;
         --card-width: 150px;
         --card-margin: 0.5em;
@@ -26,12 +28,13 @@
 }
 @media only screen and (max-width: 420px) and (min-width: 0px) {
     :root {
-        --content-width: 95%;
+        --min-header-height: 60px;
+        --content-width: 100%;
         --card-width: 120px;
         --card-margin: 0.1em;
         --nav-logo-width: 25px;
         --landing-logo-width: 80px;
-        --padding: 0.25em;
+        --padding: 0.1em;
         --margin: 0.1em;
         --splash-height: 50vh;
         --hero-height: 90vh;
@@ -63,20 +66,15 @@ html,body {
     display: flex;
     justify-content: space-between;
     width: 100%;
-}
-.home-nav * {
-    display: inline-block;
-    height: 100%;
-    padding: var(--padding);
-    vertical-align: middle;
+    min-height: var(--min-header-height);
 }
 .home-nav img {
     width: var(--nav-logo-width);
     padding: 0;
     margin-left: var(--margin);
 }
-.menu {
-    margin-right: var(--margin);
+.menu, .home-nav {
+    margin: auto var(--margin);
     display: flex;
     justify-content: center;
     align-items: center;
