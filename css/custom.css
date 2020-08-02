@@ -1,0 +1,153 @@
+/* default styles */
+:root {
+    --content-width: 60%;
+    --card-width: 200px;
+    --card-margin: 1em;
+    --nav-logo-width: 60px;
+    --landing-logo-width: 200px;
+    --padding: 2em;
+    --margin: 1em;
+    --splash-height: 25vh;
+    --hero-height: 50vh;
+}
+/* styles when width shrinks */
+@media only screen and (max-width: 720px) and (min-width: 420px) {
+    :root {
+        --content-width: 80%;
+        --card-width: 150px;
+        --card-margin: 0.5em;
+        --nav-logo-width: 30px;
+        --landing-logo-width: 120px;
+        --padding: 0.5em;
+        --margin: 0.25em;
+        --splash-height: 30vh;
+        --hero-height: 75vh;
+    }
+}
+@media only screen and (max-width: 420px) and (min-width: 0px) {
+    :root {
+        --content-width: 95%;
+        --card-width: 120px;
+        --card-margin: 0.1em;
+        --nav-logo-width: 25px;
+        --landing-logo-width: 80px;
+        --padding: 0.25em;
+        --margin: 0.1em;
+        --splash-height: 50vh;
+        --hero-height: 90vh;
+    }
+}
+* {
+    /* So padding gets counted within the width of the element */
+    box-sizing: border-box;
+    /* outline: 2px solid coral; */
+}
+html,body {
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    /* This is to enable the spacer div which pushes the footer to the bottom
+    of the page */
+    display: flex;
+    flex-direction: column;
+}
+.spacer {
+    /* Occupies whatever space is remaining since it is the only element in
+    body with a flex property */
+    flex: 1;
+    padding: 0;
+    margin: 0 auto;
+    width: var(--content-width);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.home-nav * {
+    display: inline-block;
+    height: 100%;
+    padding: var(--padding);
+    vertical-align: middle;
+}
+.home-nav img {
+    width: var(--nav-logo-width);
+    padding: 0;
+    margin-left: var(--margin);
+}
+.menu {
+    margin-right: var(--margin);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu *{
+    margin-top: var(--margin);
+    
+}
+/* 100% width div */
+.splash{
+    flex: 0 auto;
+    width: 100%;
+    padding: var(--padding);
+}
+.hero {
+    flex: 3 auto;
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.landing {
+    text-align: center;
+    padding: var(--padding);
+}
+.hero .logo {
+    width: var(--landing-logo-width);
+}
+.actions {
+    margin: var(--margin) 0;
+}
+.cards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card {
+    flex: 1 var(--card-width);
+    max-width: var(--card-width);
+    min-height: var(--card-width);
+    margin: var(--card-margin);
+    text-align: center;
+    padding: 1em;
+}
+.card img {
+    width: 70%;
+}
+.content {
+    flex: 2;
+    clear: both; /* start below floating divs in header */
+    margin: 0 auto auto;
+    display: block;
+    width: var(--content-width);
+    padding: var(--padding);
+}
+.content embed {
+    height: 100%;
+    margin: 0 auto;
+}
+.footer {
+    flex: 1;
+    max-height: var(--splash-height);
+}
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+/* To force rendered icons to be at the same level as text */
+.material-icons {
+    vertical-align: text-bottom;
+}

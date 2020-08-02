@@ -1,0 +1,77 @@
+:p1 {
+    /* https://coolors.co/114b5f-456990-e4fde1-f45b69-6b2737 */
+    --midnight-green-eagle-green:   hsla(195, 70%, 22%, 1);
+    --queen-blue:                   hsla(211, 35%, 42%, 1);
+    --nyanza:                       hsla(114, 88%, 94%, 1);
+    --fiery-rose:                   hsla(355, 87%, 66%, 1);
+    --wine:                         hsla(346, 47%, 29%, 1);
+}
+:p2 {
+    /* https://coolors.co/160f29-246a73-368f8b-f3dfc1-ddbea8 */
+    --dark-purple:  hsla(256, 46%, 11%, 1);
+    --ming:         hsla(187, 52%, 30%, 1);
+    --dark-cyan:    hsla(177, 45%, 39%, 1);
+    --champagne:    hsla(36, 68%, 85%, 1);
+    --desert-sand:  hsla(25, 44%, 76%, 1);
+}
+:root {
+    --faint:       hsla(114, 88%, 94%, 1);
+    --light:         hsla(355, 87%, 66%, 1);
+    --medium:        hsla(211, 35%, 42%, 1);
+    --dark:        hsla(195, 70%, 22%, 1);
+    --extradark:    hsla(346, 47%, 29%, 1);
+
+    --dt: 0.1s; /* transition duration */
+}
+* {
+    font-family: 'Raleway', sans-serif;
+    color: var(--extradark);
+}
+.button {
+    transition: background-color var(--dt), box-shadow var(--dt);
+    background-color: var(--dark);
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+    color: var(--faint);
+    text-decoration: none;
+    margin: auto 0.5em;
+    padding: 0.5em;
+}
+.button:hover {
+    background-color: var(--medium);
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    transition-duration: 0.5;
+}
+.button:active {
+    box-shadow: inset 3px 3px 7px 0px rgba(0,0,0,0.75);
+}
+
+body {
+    background-color: var(--dark);
+}
+.header {
+    background-color: var(--extradark);
+}
+.home-nav * {
+    color: var(--light);
+}
+.hero {
+    background-color: var(--faint);
+}
+.cards, .cards *, .splash {
+    background-color: var(--dark);
+    color: var(--faint);
+}
+.card {
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.card, .card * {
+    background-color: var(--light);
+}
+.footer, .footer * {
+    background-color: var(--medium);
+    color: var(--faint);
+}
+body>.content, .spacer {
+    background-color: var(--faint);
+    box-shadow: 5px 0px 10px 0px rgba(0,0,0,0.75);
+}
