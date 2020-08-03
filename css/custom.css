@@ -1,6 +1,6 @@
 /* default styles */
 :root {
-    --min-header-height: 30px;
+    --min-header-height: 60px;
     --content-width: 60%;
     --card-width: 200px;
     --card-margin: 1em;
@@ -14,7 +14,7 @@
 /* styles when width shrinks */
 @media only screen and (max-width: 720px) and (min-width: 420px) {
     :root {
-        --min-header-height: 40px;
+        --min-header-height: 60px;
         --content-width: 80%;
         --card-width: 150px;
         --card-margin: 0.5em;
@@ -34,7 +34,7 @@
         --card-margin: 0.1em;
         --nav-logo-width: 25px;
         --landing-logo-width: 80px;
-        --padding: 0.1em;
+        --padding: 0.25em;
         --margin: 0.1em;
         --splash-height: 50vh;
         --hero-height: 90vh;
@@ -88,6 +88,7 @@ html,body {
     flex: 0 auto;
     width: 100%;
     padding: var(--padding);
+    /* min-height: var(--splash-height); */
 }
 .hero {
     flex: 3 auto;
@@ -120,13 +121,13 @@ html,body {
     min-height: var(--card-width);
     margin: var(--card-margin);
     text-align: center;
-    padding: 1em;
+    padding: var(--padding);
 }
 .card img {
     width: 70%;
 }
 .content {
-    flex: 2;
+    flex: 2 auto;
     clear: both; /* start below floating divs in header */
     margin: 0 auto auto;
     display: block;
@@ -137,10 +138,9 @@ html,body {
     height: 100%;
     margin: 0 auto;
 }
-.footer {
-    flex: 1;
-    max-height: var(--splash-height);
-}
+/* .footer {
+    flex: 1 auto;
+} */
 .footer ul {
     list-style-type: none;
     padding: 0;
