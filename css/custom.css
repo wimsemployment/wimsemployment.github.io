@@ -98,11 +98,30 @@ html,body {
     justify-content: center;
     align-items: center;
 }
+.hero .vid-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0; left:0;
+    overflow: hidden;
+    z-index: -1;
+}
+.hero video {
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 177.77777778vh;
+    min-width: 100%;
+    min-height: 56.25vw; 
+}
 .landing {
     text-align: center;
     padding: var(--padding);
 }
-.hero .logo {
+.hero .logo-main {
     width: var(--landing-logo-width);
 }
 .actions {
@@ -117,14 +136,17 @@ html,body {
 }
 .card {
     flex: 1 var(--card-width);
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
     max-width: var(--card-width);
     min-height: var(--card-width);
     margin: var(--card-margin);
     text-align: center;
     padding: var(--padding);
 }
-.card img {
-    width: 70%;
+.card:hover {
+    background-size: 150%;
 }
 .content {
     flex: 2 auto;
@@ -138,9 +160,6 @@ html,body {
     height: 100%;
     margin: 0 auto;
 }
-/* .footer {
-    flex: 1 auto;
-} */
 .footer ul {
     list-style-type: none;
     padding: 0;

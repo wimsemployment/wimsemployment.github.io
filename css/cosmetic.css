@@ -7,19 +7,19 @@
     --wine:                         hsla(346, 47%, 29%, 1);
 }
 :p2 {
-    /* https://coolors.co/160f29-246a73-368f8b-f3dfc1-ddbea8 */
-    --dark-purple:  hsla(256, 46%, 11%, 1);
-    --ming:         hsla(187, 52%, 30%, 1);
-    --dark-cyan:    hsla(177, 45%, 39%, 1);
-    --champagne:    hsla(36, 68%, 85%, 1);
-    --desert-sand:  hsla(25, 44%, 76%, 1);
+    /* https://coolors.co/bd1919-f28d11-011936-3088f2-fffdfd */
+    --venetian-red: hsla(0, 77%, 42%, 1);
+    --carrot-orange: hsla(33, 90%, 51%, 1);
+    --oxford-blue: hsla(213, 96%, 11%, 1);
+    --bleu-de-france: hsla(213, 88%, 57%, 1);
+    --white: hsla(0, 100%, 100%, 1);
 }
 :root {
-    --faint:       hsla(114, 88%, 94%, 1);
-    --light:         hsla(355, 87%, 66%, 1);
-    --medium:        hsla(211, 35%, 42%, 1);
-    --dark:        hsla(195, 70%, 22%, 1);
-    --extradark:    hsla(346, 47%, 29%, 1);
+    --faint:       hsla(0, 100%, 100%, 1);
+    --light:         hsla(213, 88%, 57%, 1);
+    --medium:        hsla(33, 90%, 51%, 1);
+    --dark:        hsla(0, 77%, 42%, 1);
+    --extradark:    hsla(213, 96%, 11%, 1);;
 
     --dt: 0.1s; /* transition duration */
 }
@@ -46,19 +46,26 @@
 }
 
 body {
-    background-color: var(--dark);
+    background-color: var(--faint);
 }
 .header {
     background-color: var(--extradark);
 }
+.logo {
+    filter: invert(1);
+}
 .home-nav * {
-    color: var(--light);
+    color: var(--faint);
 }
 .hero {
+    /* background-color: var(--faint); */
+}
+.landing {
     background-color: var(--faint);
+    opacity: 0.8;
 }
 .cards, .cards *, .splash {
-    background-color: var(--dark);
+    background-color: var(--faint);
     color: var(--faint);
 }
 .card {
@@ -68,10 +75,20 @@ body {
     background-color: var(--light);
 }
 .footer, .footer * {
-    background-color: var(--medium);
+    background-color: var(--light);
     color: var(--faint);
 }
 body>.content, .spacer {
     background-color: var(--faint);
     box-shadow: 5px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--dark);
+}
+strong, em {
+    color: var(--extradark);
+}
+a {
+    /* color: var(--light); */
 }
