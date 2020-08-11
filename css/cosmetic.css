@@ -52,7 +52,7 @@ body {
     background-color: var(--extradark);
 }
 .logo {
-    filter: invert(1);
+    /* filter: invert(1); */
 }
 .home-nav * {
     color: var(--faint);

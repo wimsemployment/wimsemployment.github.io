@@ -4,8 +4,8 @@
     --content-width: 60%;
     --card-width: 200px;
     --card-margin: 1em;
-    --nav-logo-width: 60px;
-    --landing-logo-width: 200px;
+    --nav-logo-height: 45px;
+    --landing-logo-width: 320px;
     --padding: 2em;
     --margin: 1em;
     --splash-height: 25vh;
@@ -18,7 +18,7 @@
         --content-width: 80%;
         --card-width: 150px;
         --card-margin: 0.5em;
-        --nav-logo-width: 30px;
+        --nav-logo-height: 40px;
         --landing-logo-width: 120px;
         --padding: 0.5em;
         --margin: 0.25em;
@@ -32,7 +32,7 @@
         --content-width: 100%;
         --card-width: 120px;
         --card-margin: 0.1em;
-        --nav-logo-width: 25px;
+        --nav-logo-height: 30px;
         --landing-logo-width: 80px;
         --padding: 0.25em;
         --margin: 0.1em;
@@ -69,7 +69,7 @@ html,body {
     min-height: var(--min-header-height);
 }
 .home-nav img {
-    width: var(--nav-logo-width);
+    height: var(--nav-logo-height);
     padding: 0;
     margin-left: var(--margin);
 }
@@ -125,6 +125,7 @@ html,body {
     width: var(--landing-logo-width);
 }
 .actions {
+    padding: var(--padding);
     margin: var(--margin) 0;
 }
 .cards {
