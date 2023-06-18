@@ -127,6 +127,7 @@ html,body {
 .actions {
     padding: var(--padding);
     margin: var(--margin) 0;
+    display: flex;
 }
 .cards {
     width: 100%;
