@@ -1,0 +1,94 @@
+:p1 {
+    /* https://coolors.co/114b5f-456990-e4fde1-f45b69-6b2737 */
+    --midnight-green-eagle-green:   hsla(195, 70%, 22%, 1);
+    --queen-blue:                   hsla(211, 35%, 42%, 1);
+    --nyanza:                       hsla(114, 88%, 94%, 1);
+    --fiery-rose:                   hsla(355, 87%, 66%, 1);
+    --wine:                         hsla(346, 47%, 29%, 1);
+}
+:p2 {
+    /* https://coolors.co/bd1919-f28d11-011936-3088f2-fffdfd */
+    --venetian-red: hsla(0, 77%, 42%, 1);
+    --carrot-orange: hsla(33, 90%, 51%, 1);
+    --oxford-blue: hsla(213, 96%, 11%, 1);
+    --bleu-de-france: hsla(213, 88%, 57%, 1);
+    --white: hsla(0, 100%, 100%, 1);
+}
+:root {
+    --faint:       hsla(0, 100%, 100%, 1);
+    --light:         hsla(213, 88%, 57%, 1);
+    --medium:        hsla(33, 90%, 51%, 1);
+    --dark:        hsla(0, 77%, 42%, 1);
+    --extradark:    hsla(213, 96%, 11%, 1);;
+
+    --dt: 0.1s; /* transition duration */
+}
+* {
+    font-family: 'Raleway', sans-serif;
+    color: var(--extradark);
+}
+.button {
+    transition: background-color var(--dt), box-shadow var(--dt);
+    background-color: var(--dark);
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+    color: var(--faint);
+    text-decoration: none;
+    margin: auto 0.5em;
+    padding: 0.5em;
+}
+.button:hover {
+    background-color: var(--medium);
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    transition-duration: 0.5;
+}
+.button:active {
+    box-shadow: inset 3px 3px 7px 0px rgba(0,0,0,0.75);
+}
+
+body {
+    background-color: var(--faint);
+}
+.header {
+    background-color: var(--extradark);
+}
+.logo {
+    /* filter: invert(1); */
+}
+.home-nav * {
+    color: var(--faint);
+}
+.hero {
+    /* background-color: var(--faint); */
+}
+.landing {
+    background-color: var(--faint);
+    opacity: 0.8;
+}
+.cards, .cards *, .splash {
+    background-color: var(--faint);
+    color: var(--faint);
+}
+.card {
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.card, .card * {
+    background-color: var(--light);
+}
+.footer, .footer * {
+    background-color: var(--light);
+    color: var(--faint);
+}
+body>.content, .spacer {
+    background-color: var(--faint);
+    box-shadow: 5px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--dark);
+}
+strong, em {
+    color: var(--extradark);
+}
+a {
+    /* color: var(--light); */
+}

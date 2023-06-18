@@ -1,0 +1,38 @@
+{{define "main"}}
+<section class="hero">
+    {{with .Site.Params.video}}
+    <div class="vid-container">
+        <video autoplay muted loop id="myVideo">
+            <source src="{{.}}" type="video/mp4">
+        </video>
+    </div>
+    {{end}}
+    <div class="landing">
+        <img class="logo-main" src="{{.Site.Params.logo}}"/>
+        <h1>{{.Title}}</h1>
+        <h2>{{.Site.Params.motto}}</h2>
+        <div class="contact">
+            <a href="mailto:{{.Site.Params.email}}"><i class="material-icons">mail</i>: {{.Site.Params.email}}</a>
+            <a href="tel:{{.Site.Params.phone}}"><i class="material-icons">phone</i>: {{.Site.Params.phone}}</a>
+        </div>
+        <!-- <p></p> -->
+        <div class="actions">
+            <a href="mailto:{{.Site.Params.email}}" class="button">Hire Workers</a>
+            <a href="/register/" class="button">Register for jobs</a>
+        </div>
+    </div>
+</section>
+<section class="splash {{.Site.Params.cards}}">
+    <div class="cards">
+        {{$cards:=.Site.GetPage "section" .Site.Params.cards}}
+        {{range $p:= sort $cards.Pages "Title"}}
+            <div class="card" style="background-image: url({{$p.Params.image}});
+                background-size: cover; background-repeat: no-repeat;
+                background-position: center;">
+                <!-- <img src="{{$p.Params.image}}"/> -->
+                <p>{{$p.Title | title}}</p>
+            </div>
+        {{end}}
+    </div>
+</section>
+{{end}}

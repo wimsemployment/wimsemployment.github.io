@@ -1,0 +1,16 @@
+<section class="splash footer">
+    <div class="content">
+        <ul>
+            {{if .Site.Params.email}}
+            <li><a href="mailto:{{.Site.Params.email}}"><i class="material-icons">mail</i>: {{.Site.Params.email}}</a></li>
+            {{end}}
+            {{if .Site.Params.phone}}
+            <li><a href="tel:{{.Site.Params.phone}}"><i class="material-icons">phone</i>: {{.Site.Params.phone}}</a></li>
+            {{end}}
+            {{if .Site.Params.address}}
+            <li><a href="https://www.google.com/maps/place/{{.Site.Params.address | urlize}}" target="_blank" rel="noopener"><i class="material-icons">map</i>: {{.Site.Params.address}}</a></li>
+            {{end}}
+        </ul>
+        <span><small>{{.Site.Params.attribution | safeHTML}}</small></span>
+    </div>
+</section>

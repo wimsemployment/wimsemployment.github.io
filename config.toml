@@ -1,0 +1,17 @@
+baseURL = "https://wimsemployment.com/"
+languageCode = "en-us"
+title = "WIMS Employment"
+theme = "custom"
+disableKinds = ["taxonomy", "term", "RSS"]
+googleAnalytics = "UA-174680082-1"
+
+[params]
+    motto = "Staffing the London & Greater Toronto Area"
+    logo = "img/logos/black.png"
+    logo_small = "img/logos/white.png"
+    video = "img/video.mp4"
+    email = "info@wimsemployment.com"
+    phone = "+1 (416) 845-2667"
+    address = ""
+    cards = "jobs"
+    attribution = "Icons designed by <a href=\"https://www.freepik.com\">FreePik</a>, <a href=\"https://material.io\">Material.io</a>"
